@@ -1,21 +1,18 @@
-import { View, Text, Pressable, TouchableHighlight, TouchableOpacity } from 'react-native';
+import { View, Text, TouchableOpacity } from 'react-native';
+
+import styles from './styles';
 
 export default function Exemplo_3() {
+
+    function mensagem () {
+        alert('Aula de React-Native');
+    }
+
     return (
-        <View>
-            <Text>Exemplo 3</Text>
-            <Pressable style={({ pressed }) => [
-                {
-                    backgroundColor: pressed ? 'rgb(210, 230, 255)' : 'white',
-                },
-            ]}>
-                <Text>Botão</Text>
-            </Pressable>
-            <TouchableHighlight>
-                <Text>Botão Highlight</Text>
-            </TouchableHighlight>
-            <TouchableOpacity>
-                <Text>Botão Opacit</Text>
+        <View style={styles.container}>
+            <Text style={styles.titulo}>Exemplo 3</Text>
+            <TouchableOpacity style={styles.botao} onPress={() => mensagem()}>
+                <Text style={styles.txtBotao}>Botão</Text>
             </TouchableOpacity>
         </View>
     );
