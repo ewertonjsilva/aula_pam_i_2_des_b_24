@@ -11,10 +11,10 @@ const styles = StyleSheet.create({
     }, 
     titulo: {
         fontSize: 30, 
-        fontWeight: 'bold', 
+        fontWeight: 'bold',         
     }, 
     botao: {
-        width: '70%', 
+        width: '80%', 
         padding: 10, 
         margin: 20, 
         backgroundColor: '#000', 
@@ -25,6 +25,19 @@ const styles = StyleSheet.create({
     txtBotao: {
         fontSize: 25, 
         color: '#fafafa', 
+    }, 
+    containerLadoLado: {
+        // borderWidth: 3, 
+        width: '80%', 
+        // height: 200, 
+        marginTop: 20, 
+        flexDirection: 'row', 
+        justifyContent: 'space-between', 
+        alignItems: 'center', 
+    }, 
+    botaoContainer: {
+        width: '30%', 
+        marginHorizontal: 0, 
     }, 
 });
 
