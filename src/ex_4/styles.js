@@ -30,6 +30,30 @@ const styles = StyleSheet.create({
         borderRadius: 20, 
         padding: 5, 
     }, 
+    linha: { 
+        borderBottomWidth: 3, 
+        borderColor: '#b71c1c', 
+        marginVertical: 20, 
+        width: '100%'
+    }, 
+    botao: {
+        width: '80%', 
+        padding: 16, 
+        alignItems: 'center',  
+        borderRadius: 20, 
+        backgroundColor: '#b71c1c', 
+        marginVertical: 20, 
+    }, 
+    botaoPress: {
+        backgroundColor: '#fff', 
+    }, 
+    txtBotao: {
+        color: '#ffcdd2', 
+        fontSize: 20,         
+    },
+    txtBotaoPress: {
+        color: '#b71c1c',       
+    }, 
 }); 
 
 export default styles;
