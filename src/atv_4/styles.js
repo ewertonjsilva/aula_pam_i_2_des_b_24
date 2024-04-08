@@ -7,6 +7,7 @@ const styles = StyleSheet.create({
         alignItems: 'center', 
         backgroundColor: '#ffcdd2', 
         padding: 8, 
+        borderRadius: 20, 
     }, 
     titulo: {
         fontSize: 30, 
@@ -22,13 +23,14 @@ const styles = StyleSheet.create({
         color: '#b71c1c', 
     }, 
     input: {
-        fontSize: 25, 
+        fontSize: 20, 
         width: '80%', 
         textAlign: 'center', 
         borderWidth: 3, 
         borderColor: '#b71c1c', 
-        borderRadius: 20, 
+        borderRadius: 10, 
         padding: 5, 
+        marginBottom: 20, 
     }, 
     linha: { 
         borderBottomWidth: 3, 
@@ -54,6 +56,12 @@ const styles = StyleSheet.create({
     txtBotaoPress: {
         color: '#b71c1c',       
     }, 
+    label: {
+        fontSize: 14,                  
+        color: '#b71c1c', 
+        fontWeight: 'bold', 
+        width: '80%', 
+    },
 }); 
 
 export default styles;
