@@ -47,7 +47,9 @@ const styles = StyleSheet.create({
         marginVertical: 20, 
     }, 
     botaoPress: {
-        backgroundColor: '#fff', 
+        backgroundColor: '#ffcdd2', 
+        borderColor: '#b71c1c', 
+        borderWidth: 3, 
     }, 
     txtBotao: {
         color: '#ffcdd2', 
