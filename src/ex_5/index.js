@@ -10,7 +10,7 @@ export default function Exemplo5() {
     const [isFocusTotal, setIsFocusTotal] = useState(false); 
     const [n1, setN1] = useState(0); 
     const [n2, setN2] = useState(0); 
-    const [total, setTotal] = useState(''); 
+    const [total, setTotal] = useState(0); 
 
     function soma() {
         setTotal(parseFloat(n1) + parseFloat(n2));
@@ -84,8 +84,8 @@ export default function Exemplo5() {
                 }
                 onFocus={() => setIsFocusTotal(true)}
                 onBlur={() => setIsFocusTotal(false)} 
-                editable={false}
-                value={total ? parseFloat(total).toFixed(2) : ''}
+                readOnly={true}
+                value={total ? parseFloat(total).toFixed(2) : '0,00'}
             />
 
             <Pressable
