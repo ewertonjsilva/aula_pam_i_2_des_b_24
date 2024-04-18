@@ -3,7 +3,7 @@ import { StyleSheet } from 'react-native';
 const styles = StyleSheet.create({
     container: {
         flex: 1, 
-        backgroundColor: '#fafafa', 
+        backgroundColor: '#f5f5f5', 
         width: '100%', 
         borderRadius: 20, 
         alignItems: 'center', 
@@ -12,6 +12,7 @@ const styles = StyleSheet.create({
     titulo: {
         fontSize: 30, 
         fontWeight: 'bold', 
+        color: '9e9e9e', 
     }, 
     botao: {
         width: '70%', 

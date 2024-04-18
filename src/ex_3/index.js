@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { View, Text, TouchableOpacity } from 'react-native';
+import { View, Text, Touchable } from 'react-native';
 
 import styles from './styles';
 
@@ -18,13 +18,14 @@ export default function Exemplo_3() {
     return (
         <View style={styles.container}>
             <Text style={styles.titulo}>Exemplo 3</Text>
-            <TouchableOpacity style={styles.botao} onPress={() => mensagem()}>
+            <Touchable style={styles.botao} onPress={() => mensagem()}>
                 <Text style={styles.txtBotao}>Botão</Text>
-            </TouchableOpacity>
+            </Touchable>
             <Text style={styles.titulo}>{numero}</Text>
-            <TouchableOpacity style={styles.botao} onPress={() => incrementar()}>
+            <Touchable style={styles.botao} onPress={() => incrementar()}>
                 <Text style={styles.txtBotao}>Incrementar nº</Text>
-            </TouchableOpacity>
+            </Touchable>
         </View>
     );
 }
+

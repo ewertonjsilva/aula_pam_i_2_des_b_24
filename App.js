@@ -1,7 +1,7 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, View } from 'react-native';
 
-import Exemplo2 from './src/ex_2';
+// import Exemplo2 from './src/ex_2';
 // import Atividade1 from './src/atv_1';
 // import nomes from './src/ex_2/listaNomes'; 
 
@@ -11,12 +11,13 @@ import Exemplo2 from './src/ex_2';
 // import Exemplo4 from './src/ex_4';
 // import Atividade4 from './src/atv_4';
 
-import Exemplo5 from './src/ex_5';
+// import Exemplo5 from './src/ex_5';
+import Atividade5 from './src/atv_5';
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <Exemplo5 />
+      <Atividade5 />
       <StatusBar style="auto" />
     </View>
   );

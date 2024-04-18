@@ -3,7 +3,7 @@ import { View, Text, Pressable, TextInput } from 'react-native';
 
 import styles from './styles';
 
-export default function Exemplo5() { 
+export default function Atividade5() { 
 
     const [isFocusN1, setIsFocusN1] = useState(false);
     const [isFocusN2, setIsFocusN2] = useState(false);
