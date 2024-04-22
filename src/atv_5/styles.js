@@ -39,8 +39,8 @@ const styles = StyleSheet.create({
       height: 60, 
       justifyContent: 'center', 
       borderRadius: 10, 
-      marginTop: 20, 
-      width: '100%', 
+      marginVertical: 10, 
+      width: '20%', 
     }, 
     buttonTouch: {
         backgroundColor: '#C51162', 
@@ -54,6 +54,10 @@ const styles = StyleSheet.create({
       fontSize: 16, 
       fontWeight: 'bold', 
       color: '#C51162',     
+    }, 
+    containerBotoes: {
+      flexDirection: 'row', 
+      justifyContent: 'space-between'
     }, 
   });
   

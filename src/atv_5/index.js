@@ -1,20 +1,44 @@
 import { useState } from 'react';
 import { View, Text, Pressable, TextInput } from 'react-native';
 
+import Input from './input';
+
 import styles from './styles';
 
-export default function Atividade5() { 
+export default function Atividade5() {
 
-    const [isFocusN1, setIsFocusN1] = useState(false);
-    const [isFocusN2, setIsFocusN2] = useState(false);
     const [isFocusTotal, setIsFocusTotal] = useState(false); 
+    const [sinal, setSinal] = useState('');
 
-    const [n1, setN1] = useState(0); 
-    const [n2, setN2] = useState(0); 
-    const [total, setTotal] = useState(0); 
+    const [n1, setN1] = useState(0);
+    const [n2, setN2] = useState(0);
+    const [total, setTotal] = useState(0);
 
     function soma() {
         setTotal(parseFloat(n1) + parseFloat(n2));
+        setSinal('+');
+    }
+
+    function subtracao() {
+        setTotal(parseFloat(n1) - parseFloat(n2));
+        setSinal('-');
+    }
+
+    function multiplicacao() {
+        setTotal(parseFloat(n1) * parseFloat(n2));
+        setSinal('*');
+    }
+
+    function divisao() {
+        setTotal(parseFloat(n1) / parseFloat(n2));
+        setSinal('/');
+    }
+
+    function zerar() {
+        setTotal(0);
+        setN1(0);
+        setN2(0);
+        setSinal('');
     }
 
     return (
@@ -24,81 +48,78 @@ export default function Atividade5() {
             <Text style={styles.txtSaida}> Calculadora básica </Text>
 
             <Text style={styles.textLabel}> 1º número </Text>
-            <TextInput
-                style={
-                    [
-                        styles.txtEntrada, 
-                            isFocusN1 ? 
-                                {
-                                    borderColor: '#C51162',                                     
-                                    outline: 'none', 
-                                } 
-                            : 
-                                {}
-                    ]
-                }
-                onFocus={() => setIsFocusN1(true)}
-                onBlur={() => setIsFocusN1(false)} 
-                onChangeText={(num1) => setN1(num1)}
-                value={n1}
-                // keyboardType='numeric'
+            <Input valor={n1} atualizaValor={setN1} />
 
-            />
-
-            <Text style={styles.txtSaida}> + </Text>
+            <Text style={styles.txtSaida}> {sinal} </Text>
 
             <Text style={styles.textLabel}> 2º número </Text>
-            <TextInput
-                style={
-                    [
-                        styles.txtEntrada, 
-                            isFocusN2 ? 
-                                {
-                                    borderColor: '#C51162',                                     
-                                    outline: 'none', 
-                                } 
-                            : 
-                                {}
-                    ]
-                }
-                onFocus={() => setIsFocusN2(true)}
-                onBlur={() => setIsFocusN2(false)} 
-                onChangeText={(num2) => setN2(num2)}
-                value={n2}
-            />
+            <Input valor={n2} atualizaValor={setN2} />
 
             <Text style={[styles.txtSaida, { margin: 0 }]}> = </Text>
 
             <Text style={styles.textLabel}> Total </Text>
-            <TextInput
-                style={
-                    [
-                        styles.txtEntrada, 
-                            isFocusTotal ? 
-                                {
-                                    borderColor: '#C51162',                                     
-                                    outline: 'none', 
-                                } 
-                            : 
-                                {}
-                    ]
-                }
-                onFocus={() => setIsFocusTotal(true)}
-                onBlur={() => setIsFocusTotal(false)} 
-                readOnly={true}
-                value={total ? parseFloat(total).toFixed(2) : '0.00'}
-            />
+            <Input valor={total} readOnly='true' />
+
+            <View style={styles.containerBotoes}>
+                <Pressable
+                    onPress={() => soma()}
+                    style={
+                        ({ pressed }) => pressed ?
+                            [styles.button, styles.buttonTouch]
+                            :
+                            styles.button
+                    }
+                >
+                    <Text style={styles.textButton}> + </Text>
+                </Pressable>
+
+                <Pressable
+                    onPress={() => subtracao()}
+                    style={
+                        ({ pressed }) => pressed ?
+                            [styles.button, styles.buttonTouch]
+                            :
+                            styles.button
+                    }
+                >
+                    <Text style={styles.textButton}> - </Text>
+                </Pressable>
+
+                <Pressable
+                    onPress={() => multiplicacao()}
+                    style={
+                        ({ pressed }) => pressed ?
+                            [styles.button, styles.buttonTouch]
+                            :
+                            styles.button
+                    }
+                >
+                    <Text style={styles.textButton}> * </Text>
+                </Pressable>
+
+                <Pressable
+                    onPress={() => divisao()}
+                    style={
+                        ({ pressed }) => pressed ?
+                            [styles.button, styles.buttonTouch]
+                            :
+                            styles.button
+                    }
+                >
+                    <Text style={styles.textButton}> / </Text>
+                </Pressable>
+            </View>
 
             <Pressable
-                onPress={() => soma()}
+                onPress={() => zerar()}
                 style={
-                    ({pressed}) => pressed ? 
-                        [styles.button, styles.buttonTouch] 
-                    : 
-                        styles.button
+                    ({ pressed }) => pressed ?
+                        [styles.button, styles.buttonTouch, {width: '100%'}]
+                        :
+                        [styles.button, {width: '100%'}]
                 }
             >
-                <Text style={styles.textButton}> + </Text>
+                <Text style={styles.textButton}> Zerar </Text>
             </Pressable>
 
         </View>
