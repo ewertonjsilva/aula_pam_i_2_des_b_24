@@ -8,7 +8,7 @@ export default function Exemplo_3() {
     var numero = 0;
 
     function incrementar() {
-        numero = numero = 1; 
+        numero = numero + 1; 
     }
 
     return (

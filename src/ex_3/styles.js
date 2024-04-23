@@ -12,21 +12,23 @@ const styles = StyleSheet.create({
     titulo: {
         fontSize: 30, 
         fontWeight: 'bold', 
-        color: '9e9e9e', 
+        color: '#9e9e9e', 
     }, 
     botao: {
         width: '70%', 
         padding: 10, 
         margin: 20, 
-        backgroundColor: '#000', 
+        backgroundColor: '#9e9e9e', 
         alignItems: 'center', 
         justifyContent: 'center', 
         borderRadius: 20, 
     }, 
     txtBotao: {
         fontSize: 25, 
-        color: '#fafafa', 
+        color: '#f5f5f5', 
     }, 
 });
 
 export default styles;
+
+
