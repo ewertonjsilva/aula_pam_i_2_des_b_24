@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { TextInput } from 'react-native'; 
 
-import styles from '../styles';
+import styles from './styles';
 
 export default function Input({readOnly = false, valor, atualizaValor}) { 
     
@@ -25,7 +25,7 @@ export default function Input({readOnly = false, valor, atualizaValor}) {
             onBlur={() => setIsFocus(false)}
             readOnly={readOnly} 
             onChangeText={(num) => atualizaValor(num)}
-            value={valor ? parseFloat(valor).toFixed(2) : '0.00'}
+            value={valor}
         />
     );
 }

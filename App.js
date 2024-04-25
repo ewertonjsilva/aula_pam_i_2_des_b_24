@@ -14,10 +14,12 @@ import Exemplo_3 from './src/ex_3';
 // import Exemplo5 from './src/ex_5';
 import Atividade5 from './src/atv_5';
 
+import Exemplo6 from './src/ex_6';
+
 export default function App() {
   return (
     <View style={styles.container}>
-      <Exemplo_3 />
+      <Exemplo6 />
       <StatusBar style="auto" />
     </View>
   );
@@ -26,7 +28,7 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#9e9e9e', //#c51162
+    backgroundColor: '#aaa', //#c51162
     alignItems: 'center',
     justifyContent: 'center', 
     padding: 18, 

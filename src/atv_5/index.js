@@ -1,18 +1,18 @@
 import { useState } from 'react';
-import { View, Text, Pressable, TextInput } from 'react-native';
+import { View, Text } from 'react-native';
 
-import Input from './input';
+import Input from './input'; 
+import Botao from './botao';
 
 import styles from './styles';
 
 export default function Atividade5() {
 
-    const [isFocusTotal, setIsFocusTotal] = useState(false); 
     const [sinal, setSinal] = useState('');
 
-    const [n1, setN1] = useState(0);
-    const [n2, setN2] = useState(0);
-    const [total, setTotal] = useState(0);
+    const [n1, setN1] = useState(0.00);
+    const [n2, setN2] = useState(0.00);
+    const [total, setTotal] = useState(0.00);
 
     function soma() {
         setTotal(parseFloat(n1) + parseFloat(n2));
@@ -61,66 +61,13 @@ export default function Atividade5() {
             <Input valor={total} readOnly='true' />
 
             <View style={styles.containerBotoes}>
-                <Pressable
-                    onPress={() => soma()}
-                    style={
-                        ({ pressed }) => pressed ?
-                            [styles.button, styles.buttonTouch]
-                            :
-                            styles.button
-                    }
-                >
-                    <Text style={styles.textButton}> + </Text>
-                </Pressable>
-
-                <Pressable
-                    onPress={() => subtracao()}
-                    style={
-                        ({ pressed }) => pressed ?
-                            [styles.button, styles.buttonTouch]
-                            :
-                            styles.button
-                    }
-                >
-                    <Text style={styles.textButton}> - </Text>
-                </Pressable>
-
-                <Pressable
-                    onPress={() => multiplicacao()}
-                    style={
-                        ({ pressed }) => pressed ?
-                            [styles.button, styles.buttonTouch]
-                            :
-                            styles.button
-                    }
-                >
-                    <Text style={styles.textButton}> * </Text>
-                </Pressable>
-
-                <Pressable
-                    onPress={() => divisao()}
-                    style={
-                        ({ pressed }) => pressed ?
-                            [styles.button, styles.buttonTouch]
-                            :
-                            styles.button
-                    }
-                >
-                    <Text style={styles.textButton}> / </Text>
-                </Pressable>
+                <Botao operacao={soma}>+</Botao>
+                <Botao operacao={subtracao}>-</Botao>  
+                <Botao operacao={multiplicacao}>*</Botao>  
+                <Botao operacao={divisao}>/</Botao>  
             </View>
 
-            <Pressable
-                onPress={() => zerar()}
-                style={
-                    ({ pressed }) => pressed ?
-                        [styles.button, styles.buttonTouch, {width: '100%'}]
-                        :
-                        [styles.button, {width: '100%'}]
-                }
-            >
-                <Text style={styles.textButton}> Zerar </Text>
-            </Pressable>
+            <Botao operacao={zerar} botaozao>Zerar</Botao>
 
         </View>
     );
