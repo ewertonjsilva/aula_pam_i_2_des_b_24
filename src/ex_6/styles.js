@@ -26,6 +26,9 @@ const styles = StyleSheet.create({
         marginVertical: 15, 
         textAlign: 'center', 
     }, 
+    txtMensagem: {
+        fontSize: 40,
+    }
 });
 
 export default styles;

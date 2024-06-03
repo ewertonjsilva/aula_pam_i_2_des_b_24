@@ -27,6 +27,8 @@ export default function Exemplo6() {
             </View>
 
             <Text style={styles.imc}>{isNaN(imc) ? mensErro : imc.toFixed(2)}</Text>
+            
+            <Text style={[styles.imc, styles.txtMensagem]}>Mensagem</Text>
 
             <Botao calcular={calculaImc}>Calcular</Botao>
         </View>
