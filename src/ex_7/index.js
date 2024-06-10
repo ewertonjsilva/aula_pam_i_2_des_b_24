@@ -45,16 +45,17 @@ export default function Exemplo7() {
         setCurrent(0);
     }
 
-    function definieOperacao(operacao) {        
+    function definieOperacao(operacao) {
         if (current === 0) {
             setOperation(operacao);
             setCurrent(1);
             setClearDisplay(true);
         } else {
-            const sinalIgual = operacao === '=';  
+            const sinalIgual = operacao === '=';
             if (!sinalIgual) {
                 setOperation(operacao);
             }
+            
             const valores = values;
 
             // valores[0] = eval(valores[0] + operation + valores[1]);
@@ -65,9 +66,9 @@ export default function Exemplo7() {
             setClearDisplay(true);
             setValues(valores);
         }
-    } 
+    }
 
-    function calculo (valor1, valor2, operacao) {
+    function calculo(valor1, valor2, operacao) {
         if (operacao === '+') return parseFloat(valor1) + parseFloat(valor2);
         if (operacao === '-') return parseFloat(valor1) - parseFloat(valor2);
         if (operacao === '*') return parseFloat(valor1) * parseFloat(valor2);

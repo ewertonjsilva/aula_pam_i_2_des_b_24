@@ -3,24 +3,29 @@ import { RFPercentage } from 'react-native-responsive-fontsize';
 
 const styles = StyleSheet.create({
     button: {
-        fontSize: RFPercentage(5),
-        height: (Dimensions.get('window').width / 4) - 4,
-        width: (Dimensions.get('window').width / 4) - 4,
-        padding: 20,
-        backgroundColor: '#f0f0f0',
-        textAlign: 'center',
+        height: (Dimensions.get('window').height / 6) - 9,
+        width: (Dimensions.get('window').width / 4) - 9,
+        padding: 10,
+        backgroundColor: '#f0f0f0', 
         borderWidth: 1,
-        borderColor: '#888',
+        borderColor: '#888', 
+        justifyContent: 'center', 
+    }, 
+    txtButton: {
+        fontSize: RFPercentage(5),        
+        textAlign: 'center',        
     },
-    operationButton: {
+    operationButton: {          
+        backgroundColor: '#FA8231',      
+    }, 
+    operationTxtButton: {
         color: '#FFF',
-        backgroundColor: '#FA8231',
-    },
+    }, 
     buttonDouble: {
-        width: ((Dimensions.get('window').width / 4) - 4.1) * 2,
+        width: ((Dimensions.get('window').width / 4) - 9) * 2,
     },
     buttonTriple: {
-        width: ((Dimensions.get('window').width / 4) - 4.1) * 3,
+        width: ((Dimensions.get('window').width / 4) - 9) * 3,
     },
 });
 export default styles;

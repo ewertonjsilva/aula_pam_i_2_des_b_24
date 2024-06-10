@@ -1,6 +1,8 @@
 import { Dimensions, StyleSheet } from 'react-native'; 
 import { RFPercentage } from 'react-native-responsive-fontsize';
 
+const altura = (Dimensions.get('window').height / 6) - 9;
+
 const styles = StyleSheet.create({
     display: {
         flex: 1, 
@@ -11,8 +13,9 @@ const styles = StyleSheet.create({
         width: '100%', 
     }, 
     displayValue: {
-        fontSize: RFPercentage(8), 
+        fontSize: altura >= 144 ? RFPercentage(5) : RFPercentage(8), 
         color: '#fff', 
     }, 
 }); 
+
 export default styles;
