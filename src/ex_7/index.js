@@ -52,7 +52,7 @@ export default function Exemplo7() {
             setClearDisplay(true);
         } else {
             const sinalIgual = operacao === '=';
-            if (!sinalIgual) {
+            if (!sinalIgual && clearDisplay) {
                 setOperation(operacao);
             }
             

@@ -16,12 +16,13 @@ import Exemplo_3 from './src/ex_3';
 
 // import Exemplo6 from './src/ex_6';
 // import Atividade6 from './src/atv_6';
-import Exemplo7 from './src/ex_7';
+// import Exemplo7 from './src/ex_7';
+import Exemplo8 from './src/ex_8';
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <Exemplo7 />
+      <Exemplo8 />
       <StatusBar style="auto" />
     </View>
   );
