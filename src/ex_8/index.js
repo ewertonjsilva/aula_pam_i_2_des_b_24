@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { View, FlatList } from 'react-native';
 import uuid from 'react-native-uuid';
 
@@ -39,6 +39,11 @@ export default function Exemplo8() {
                     return [{ id: uuid.v4(), nome: item }, ...prevItens];
                 }
             );
+            // let tempItens = itens; 
+            // const objNewItem = { id: uuid.v4(), nome: item }
+            // tempItens.push(objNewItem); 
+            // console.log(tempItens);
+            // setItens(tempItens);
         }
     }
 

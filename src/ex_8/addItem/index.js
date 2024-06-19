@@ -6,7 +6,12 @@ import styles from './styles';
 
 export default function AddItem({adicionar}) { 
 
-    const [novoItem, setNovoItem] = useState('');
+    const [novoItem, setNovoItem] = useState(''); 
+
+    function addItem() {
+        adicionar(novoItem); 
+        setNovoItem('');
+    }
 
     return(
         <View>
@@ -17,7 +22,7 @@ export default function AddItem({adicionar}) {
                 onChangeText={(valorDigitado) => setNovoItem(valorDigitado)}
             />
             <Pressable 
-                onPress={() => adicionar(novoItem)}
+                onPress={() => addItem()}
                 style={({pressed}) => pressed ? 
                     [styles.botao, styles.btnPress]
                 : 
