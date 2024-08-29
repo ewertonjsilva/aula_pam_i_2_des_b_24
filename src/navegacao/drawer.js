@@ -22,8 +22,7 @@ export default function NavegacaoDrawer() {
                     //         title="Voltar"
                     //         color="#000"
                     //     />
-                    // ),
-                    // headerBackground: '#7F0000',
+                    // ),                
                     // drawerActiveBackgroundColor: '#FF735C',
                     // drawerInactiveBackgroundColor: '#C6C6C6',
                     // drawerLabelStyle: {                        
